@@ -19,11 +19,11 @@ public class RencreditTest2 {
         mainPageSteps
                 .stepSelectMenu("Вклады","рубли");
         contributionsSteps
-                .selectTerm("9 месяцев")
                 .fillField("Сумма вклада","500000")
+                .selectTerm("9 месяцев")
                 .fillField("Ежемесячное пополнение","70000")
                 .clickElement("Ежемесячная капитализация")
-                .checkCalcValue("К снятию", "717 675,35");
+                .checkCalcValue("К снятию", "1 088 175,53");
     }
 
     @AfterClass

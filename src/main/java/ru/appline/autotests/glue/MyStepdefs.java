@@ -27,16 +27,16 @@ public class MyStepdefs {
             mainSteps.stepSelectMenu(menuItem,subMenuItem);
         }
 
-        @Когда("^выбран срок вклада \"(.+)\"$")
-        public void выбран_срок_вклада(String term){
-        contributionsSteps.selectTerm(term);
-    }
-
         @Когда("^заполняются поля:$")
         public void заполняются_поля(DataTable fields){
             Map<String,String> dataMap = fields.asMap(String.class, String.class);
             dataMap.forEach((field, value) -> { contributionsSteps.fillField(field, value); });
         }
+
+        @Когда("^выбран срок вклада \"(.+)\"$")
+        public void выбран_срок_вклада(String term){
+        contributionsSteps.selectTerm(term);
+    }
 
         @Когда("^выполнено нажатие на кнопку \"(.+)\"$")
         public void нажатие_на_кнопку(String name) throws InterruptedException {

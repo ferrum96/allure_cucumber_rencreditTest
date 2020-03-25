@@ -12,6 +12,6 @@ public class BaseSteps {
     }
 
     public static void tearDown() throws Exception {
-        getDriver().close();
+        getDriver().quit();
     }
 }

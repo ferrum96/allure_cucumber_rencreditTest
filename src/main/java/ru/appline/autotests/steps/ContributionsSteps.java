@@ -10,17 +10,17 @@ public class ContributionsSteps extends BaseSteps {
 
     public ContributionsPage contributionsPage = new ContributionsPage();
 
+    @Step("Выбран срок вклада {0}")
+    public ContributionsSteps selectTerm(String term){
+        contributionsPage.selectTerm(term);
+        return this;
+    }
+
     @Step("Поле {0} заполняется значением {1}")
     public ContributionsSteps fillField(String field, String value){
         contributionsPage
                 .scrollToElement(ContributionsPage.form,65)
                 .fillField(field, value);
-        return this;
-    }
-
-    @Step("Выбран срок вклада {0}")
-    public ContributionsSteps selectTerm(String term){
-        contributionsPage.selectTerm(term);
         return this;
     }
 
