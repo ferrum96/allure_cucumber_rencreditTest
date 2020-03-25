@@ -66,7 +66,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <includes>
-                        <include>**/RencreditTest**.java</include>
+                        <include>**/RencreditTest.java</include>
                         <include>**/CucumberRunner.java</include>
 
                     </includes>
@@ -74,17 +74,20 @@
                     <argLine>
                         -Dfile.encoding=UTF-8
                         -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                        -Dcucumber.options="--tags ${TAGS}"
                     </argLine>
-                    <systemPropertyVariables>
+                    <properties>
                         <property>
                             <name>listener</name>
-                            <value>io.qameta.allure.junit4.AllureJunit4</value>
+                            <value>ru.appline.autotests.utils.MyAllureListener</value>
                         </property>
+                    </properties>
+                    <systemProperties>
                         <property>
                             <name>allure.results.directory</name>
-                            <value>${project.build.directory}/target/allure-results</value>
+                            <value>${project.build.directory}/allure-results</value>
                         </property>
-                    </systemPropertyVariables>
+                    </systemProperties>
                 </configuration>
                 <dependencies>
                     <dependency>

@@ -23,7 +23,7 @@ public class RencreditTest2 {
                 .selectTerm("9 месяцев")
                 .fillField("Ежемесячное пополнение","70000")
                 .clickElement("Ежемесячная капитализация")
-                .checkCalcValue("К снятию", "1 088 175,53");
+                .checkCalcValue("К снятию", "1 088 174,53");
     }
 
     @AfterClass
