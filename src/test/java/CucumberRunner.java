@@ -6,8 +6,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = { "src/test/resources/features" },
         glue = {"ru.appline.autotests.glue"},
-        plugin = {"io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm"},
-        tags = {"@all"}
+        plugin = {"io.qameta.allure.cucumber3jvm.AllureCucumber3Jvm"}
+        //tags = {"@scenario2"}
 
 )
 public class CucumberRunner {

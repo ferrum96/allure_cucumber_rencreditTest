@@ -21,7 +21,7 @@ public class DriverManager {
 
     public static TestProperties props = TestProperties.getInstance();
 
-    private static void initDriver(){
+    public static void initDriver(){
 
         switch ("chrome"){
             case "firefox":

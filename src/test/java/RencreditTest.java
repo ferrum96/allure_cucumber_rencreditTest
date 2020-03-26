@@ -10,7 +10,7 @@ public class RencreditTest {
 
     @BeforeClass
     public static void before(){
-        BaseSteps.initDriver();
+        BaseSteps.openBrowser();
     }
 
     @Test
@@ -24,7 +24,6 @@ public class RencreditTest {
                 .fillField("Ежемесячное пополнение","50000")
                 .clickElement("Ежемесячная капитализация")
                 .checkCalcValue("К снятию", "559 774,53");
-
     }
 
     @AfterClass

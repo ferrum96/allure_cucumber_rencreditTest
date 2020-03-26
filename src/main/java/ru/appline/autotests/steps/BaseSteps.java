@@ -1,17 +1,17 @@
 package ru.appline.autotests.steps;
 
-import org.junit.After;
-import org.junit.Before;
+import ru.appline.autotests.utils.DriverManager;
 
 import static ru.appline.autotests.utils.DriverManager.getDriver;
+import static ru.appline.autotests.utils.DriverManager.initDriver;
 
 public class BaseSteps {
 
-    public static void initDriver(){
-        getDriver();
+    public static void openBrowser(){
+        initDriver();
     }
 
     public static void tearDown() throws Exception {
-        getDriver().quit();
+        getDriver().close();
     }
 }

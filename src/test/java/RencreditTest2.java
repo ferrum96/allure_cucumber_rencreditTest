@@ -10,7 +10,7 @@ public class RencreditTest2 {
 
     @BeforeClass
     public static void before(){
-        BaseSteps.initDriver();
+        BaseSteps.openBrowser();
     }
 
     @Test
